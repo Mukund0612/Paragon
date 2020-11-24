@@ -86,7 +86,7 @@ $meta_desc = "About Us | Paragon Accessories Pvt. Ltd.";
 
                 <div class="container">
 
-                    <!--<div class="row" >
+                    <!--<div class="row">
 
                         <div class="col-md-12">
 
