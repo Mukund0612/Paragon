@@ -84,9 +84,9 @@ switch($flag)
 
 						$key = array_search($_REQUEST['pro_id'], $_SESSION['cart']['item_id']);
 
-						 $_SESSION['cart']['item_qty'][$key] = $_SESSION['cart']['item_qty'][$key]+1;
+						$qty = $_SESSION['cart']['item_qty'][$key] = $_SESSION['cart']['item_qty'][$key]+1;
 						
-						$up_data['item_qty'] = 'item_qty' + 1;
+						$up_data['item_qty'] = $qty;
 						$wh_data = ['order_id' => $order_id,
 								'item_id' => $_REQUEST['pro_id'] ];
 						$updTemp = $this->Paramodel->update('temp_order_item',$up_data,$wh_data);
@@ -94,7 +94,7 @@ switch($flag)
 						//$updTemp = "update temp_order_item set item_qty = item_qty + 1 WHERE order_id = '".$order_id."' AND item_id = '".$_REQUEST['pro_id']."' ";
 						
 						 echo "success";
-
+						break;
 					}
 
 			}

@@ -114,7 +114,7 @@ $meta_desc = "Paragon Accessories Pvt. Ltd.";
     <div class="shopping-features top-feat">
       <ul>
         <li> <span class="feat-icon"><i class="fa fa-truck"></i></span>
-          <h3>Free Shipping</h3>
+          <h3>Free Shipping <?php echo display('hello'); ?> </h3>
           <p>Free shipping on all orders</p>
         </li>
         <li> <span class="feat-icon"><i class="fa fa-shield"></i></span>
