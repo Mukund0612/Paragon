@@ -129,6 +129,17 @@ class Paramodel extends CI_MODEL {
 		return $record[0]->$column;
 		
 	}
+
+	public function innerJoin()
+	{
+		$res = $this->db->select('brand.*')
+						->distinct()
+						->from('brand')
+						->join('access', 'brand.id = access.brand_id')
+						->get()
+						->result();
+		return $res;
+	}
 }
 
 ?>

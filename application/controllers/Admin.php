@@ -169,8 +169,7 @@ class Admin extends MY_Controller
 	                if($this->upload->do_upload('brand_image'))
 	                {
 	                	$result=$this->last_record('brand');
-
-	                	if($result>0){ $last_setord_no = 1; }else{ $last_setord_no = $result[0]['setord']+1; }
+	                	if(count($result) == 0){ $last_setord_no = 1; }else{ $last_setord_no = $result[0]['setord']+1; }
 	                	
 	                		$image_path = './assets/images/'.$this->upload->data('file_name');
 	                		// INSERT DATA 
@@ -195,7 +194,6 @@ class Admin extends MY_Controller
 					}
 					else
 					{
-
 						$data['error'] = array('error' => $this->upload->display_errors());
 					}
 				}

@@ -16,8 +16,9 @@ class Paragon extends MY_Controller {
 		// echo "<pre>";
 		// print_r($this->session->userdata());
 		// exit;
-		$data['brands_view'] = $this->Paramodel->select('brand','');
-		// print_r($data['brands_view']);exit; 
+		// $data['brands_view'] = $this->Paramodel->select('brand','');
+		$data['brands_view'] = $this->Paramodel->innerJoin();
+		// print_r($data['brands']);exit; 
 		// Fetch record in 2 table access and access-model for view file
 		// $column = "access.*, access-model.m_id";
 		// $match_column = "access.id = access-model.a_id";

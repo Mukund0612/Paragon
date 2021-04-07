@@ -11,7 +11,8 @@
 
 <!-- Page Header -->
 
-<?php if(!empty($error)){ print_r($error); } ?>
+<?php //print_r(validation_errors()); exit;  ?>
+<?php if(isset($error)){ print_r($error); exit; } ?>
 
 
 <div class="content bg-gray-lighter">
